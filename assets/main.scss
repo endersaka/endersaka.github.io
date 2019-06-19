@@ -1,0 +1,56 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+$min-font-size: 14;
+$max-font-size: 18;
+$min-viewport-width: 319;
+$max-viewport-width: 1200;
+
+html, body {
+	color: #293133;
+	font-family: 'Nunito', sans-serif;
+	font-size: calc(#{$min-font-size}px + ((#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-viewport-width}px) / (#{$max-viewport-width} - #{$min-viewport-width})));
+}
+
+.post-title {
+	margin-top: 1em;
+}
+
+@mixin headings($from: 1, $to: 6){
+	@for $i from $from through $to {
+		ul.post-list {
+			h#{$i} {
+				margin-top: 1em;
+			}
+		}
+
+		h#{$i} {
+			@content
+		}
+	}
+}
+
+@include headings() {
+	margin-bottom: 1em;
+	margin-top: 3em;
+	font-weight: 900;
+}
+
+@media screen and (max-width: 319.99px) {
+	html, body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	html, body {
+		font-size: 18px;
+	}
+}
+
+code, pre {
+	font-family: monospace;
+}

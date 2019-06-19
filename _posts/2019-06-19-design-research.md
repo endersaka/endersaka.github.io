@@ -8,7 +8,7 @@ The first step towards the solution is to understand what you are doing wrong (i
 
 ### Creative Distractions
 
-If you are a picky person like me, do not waste too much time reviewing design thems that are available on the Web. Even when they are released for a fee - trust me! - they are rarely well coded and the worst drawback you wouldn't like to face is to fix messy code in the attempt to implement your customizations.
+If you are a picky person like me, do not waste too much time reviewing design themes that are available on the Web. Even when they are released for a fee - trust me! - they are rarely well coded and the worst drawback you wouldn't like to face is to fix messy code in the attempt to implement your customizations.
 
 And when it comes to open source themes (especially WordPress themes) things can become very weird.
 
@@ -61,5 +61,15 @@ font-size: calc(16px + ((24 - 16) * (100vw - 400px) / (800 - 400)));
 In the form of mathematical function it can be expressed like this:
 
 $$
-s = s' + ( s'' - s' ) * ( w - w' / w'' - w' )
+s = s' + ( s'' - s' ) {w - w' \over w'' - w'}
 $$
+
+Where $s'$ is the minimum font size, $s''$ is the maximum font size, $w$ is the current viewport width, $w'$ the minimum viewport width and $w''$ the maximum viewport width.
+
+> If you want to include mathematical formulas in your own site as like as I did, you can use [MathJax](https://www.mathjax.org/), a JavaScript library that extends your Web Site to handle formulas. You can find a tutorial on how to install MathJax for Jekyll here: [How to use MathJax in Jekyll generated Github pages](https://haixing-hu.github.io/programming/2013/09/20/how-to-use-mathjax-in-jekyll-generated-github-pages/).
+
+
+
+
+
+
