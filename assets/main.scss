@@ -19,11 +19,12 @@ html, body {
 	margin-top: 1em;
 }
 
-@mixin headings($from: 1, $to: 6){
+// Inspired by https://jsfiddle.net/jitendravyas/cxJtc/
+@mixin headings($from: 1, $to: 6) {
 	@for $i from $from through $to {
 		ul.post-list {
 			h#{$i} {
-				margin-top: 1em;
+				margin-top: .5em;
 			}
 		}
 
